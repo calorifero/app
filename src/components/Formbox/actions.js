@@ -1,4 +1,4 @@
-export const ADD_CREDENTIALS = ({
-  ssid: '',
-  password: ''
-})
+export const ADD_CREDENTIALS = {
+  ssid: "",
+  password: ""
+};

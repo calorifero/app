@@ -1,10 +1,12 @@
-
-export const CREDENTIALS = (state = {
-  ssid: '',
-  password: ''
-}, action) => {
+export const CREDENTIALS = (
+  state = {
+    ssid: "",
+    password: ""
+  },
+  action
+) => {
   switch (action.type) {
-    case 'ADD_CREDENTIALS':
+    case "ADD_CREDENTIALS":
       return action.state;
     default:
       return state;
