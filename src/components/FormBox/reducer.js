@@ -7,7 +7,7 @@ export const CREDENTIALS = (
 ) => {
   switch (action.type) {
     case "ADD_CREDENTIALS":
-      return action.state;
+      return action.payload;
     default:
       return state;
   }
