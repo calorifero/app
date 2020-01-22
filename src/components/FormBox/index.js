@@ -1,44 +1,25 @@
 import React, { useState, useEffect } from "react";
 import { Button, TextInput, View } from "react-native";
-import { Formik } from "formik";
 import { mapStateToProps } from "../../redux/mapStateToProps";
 import { useSelector, useDispatch } from "react-redux";
 import { ADD_CREDENTIALS } from "./actions";
-import WifiManager from "react-native-wifi";
-
-const getSSID = () => {
-  WifiManager.getCurrentWifiSSID().then(
-    ssid => {
-      console.log("Your current connected wifi SSID is " + ssid);
-    },
-    () => {
-      console.log("Cannot get current SSID!");
-    }
-  );
-};
+import { Container, Box } from "./style";
+import { connect } from "../../services/connect/index";
 
 export const FormBox = props => {
   const credentials = useSelector(state => state.credentials);
   const dispatch = useDispatch();
-  const [username, setUsername] = useState("");
+  const [SSID, setSSID] = useState("");
   const [password, setPassword] = useState("");
+
   return (
-    <View>
-      <TextInput
-        type="username"
-        placeholder="SSID"
-        onChangeText={handleChange("ssid")}
-        onBlur={handleBlur("ssid")}
-        value={values.ssid}
+    <Container>
+      <Box type="SSID" placeholder="SSID" />
+      <Box type="password" placeholder="Password" />
+      <Button
+        title="Submit"
+        onPress={() => connect({ ssid: SSID, password: password })}
       />
-      <TextInput
-        type="password"
-        placeholder="Password"
-        onChangeText={handleChange("password")}
-        onBlur={handleBlur("password")}
-        value={values.password}
-      />
-      <Button onPress={handleSubmit} title="Submit" />
-    </View>
+    </Container>
   );
 };
