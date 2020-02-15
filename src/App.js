@@ -3,13 +3,13 @@ import { StyleSheet, Text, View } from "react-native";
 import { registerRootComponent } from "expo";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
-import { FormBox } from "./components/FormBox/index";
+import { Home } from "./components/Home/index";
 
 const App = () => {
   return (
     <Provider store={store}>
       <View>
-        <FormBox />
+        <Home />
       </View>
     </Provider>
   );
