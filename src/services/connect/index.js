@@ -1,4 +1,4 @@
-import { start } from "react-native-smartconfig-3";
+import Smartconfig from "react-native-smartconfig-3";
 
 export const connect = ({ ssid, password }) => {
   Smartconfig.start({
