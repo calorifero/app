@@ -1,1 +1,1 @@
-# regas_app
+# Calòr App
