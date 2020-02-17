@@ -1,2 +1,5 @@
 import { combineReducers } from "redux";
-export const rootReducer = combineReducers({});
+import { TEMPERATURE } from "../components/Home/Temperature/reducer";
+export const rootReducer = combineReducers({
+  temperature: TEMPERATURE
+});

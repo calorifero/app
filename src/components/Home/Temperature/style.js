@@ -9,3 +9,8 @@ export const Internal = styled.Text`
   text-align: center;
   font-weight: bold;
 `;
+
+export const Description = styled.Text`
+  font-size: 1em;
+  text-align: center;
+`;
