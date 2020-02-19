@@ -1,16 +1,23 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { registerRootComponent } from "expo";
-import { Provider } from "react-redux";
-import { Container, Logo } from "./style";
+import {
+  Container,
+  Logo,
+  LeftMessage,
+  MessageText,
+  RightMessage
+} from "./style";
 
-import { Temperature } from "./Temperature";
-
+import { Text } from "react-native";
 export const Home = () => {
   return (
     <Container>
       <Logo>calòr</Logo>
-      <Temperature />
+      <LeftMessage>
+        <MessageText>Hello</MessageText>
+      </LeftMessage>
+      <RightMessage>
+        <MessageText>Hello</MessageText>
+      </RightMessage>
     </Container>
   );
 };

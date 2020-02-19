@@ -1,5 +1,14 @@
 import { combineReducers } from "redux";
-import { TEMPERATURE } from "../components/Home/Temperature/reducer";
+
+const TEST = (state = 0, action) => {
+  switch (action.payload) {
+    case "HELLO":
+      return state;
+    default:
+      return state;
+  }
+};
+
 export const rootReducer = combineReducers({
-  temperature: TEMPERATURE
+  test: TEST
 });
