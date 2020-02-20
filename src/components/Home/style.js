@@ -18,9 +18,9 @@ export const MessageText = styled.Text`
 `;
 
 export const LeftMessage = styled.View`
-  border-radius: ${hp("50%")};
+  border-radius: ${hp("4%")};
   background-color: lightgrey;
-  width: 50%;
+  max-width: 80%;
   padding: 3%;
   margin: 1% 0 1% 3%;
 `;
@@ -30,5 +30,9 @@ export const RightMessage = styled(LeftMessage)`
   right: 0;
 
   margin: 1% 3% 1% 0;
-  alignself: flex-end;
+  alignSelf: flex-end;
+`;
+
+export const StrongMessage = styled(MessageText)`
+  font-weight: bold;
 `;
