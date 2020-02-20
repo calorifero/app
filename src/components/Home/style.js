@@ -23,7 +23,6 @@ export const LeftMessage = styled.View`
   width: 50%;
   padding: 3%;
   margin: 1% 0 1% 3%;
-  alignself: flex-start;
 `;
 
 export const RightMessage = styled(LeftMessage)`

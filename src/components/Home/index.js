@@ -7,7 +7,6 @@ import {
   RightMessage
 } from "./style";
 
-import { Text } from "react-native";
 export const Home = () => {
   return (
     <Container>
