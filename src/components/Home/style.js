@@ -4,8 +4,8 @@ import {
 } from "react-native-responsive-screen";
 
 import styled from "styled-components/native";
-export const Container = styled.View`
-  display: flex;
+export const Container = styled.ScrollView`
+  flex: 1;
 `;
 
 export const Logo = styled.Text`
@@ -15,21 +15,18 @@ export const Logo = styled.Text`
 
 export const MessageText = styled.Text`
   font-size: ${hp("2.5%")};
+  lineHeight: 20;
 `;
 
 export const LeftMessage = styled.View`
   border-radius: ${hp("4%")};
   background-color: lightgrey;
   max-width: 80%;
-  padding: 3%;
-  margin: 1% 0 1% 3%;
+  padding: 10px;
 `;
 
 export const RightMessage = styled(LeftMessage)`
   background-color: red;
-  right: 0;
-
-  margin: 1% 3% 1% 0;
   alignSelf: flex-end;
 `;
 
