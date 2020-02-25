@@ -5,53 +5,27 @@ import {
   LeftMessage,
   MessageText,
   RightMessage,
-  StrongMessage
+  StrongMessage,
+  ModelContainer
 } from "./style";
 
 export const Home = () => {
   return (
     <Container>
-      <Logo>calòr</Logo>
       <RightMessage>
-        <MessageText>Hello</MessageText>
+        <MessageText>Calòr, qual'è la temperatura di casa?</MessageText>
       </RightMessage>
+      <ModelContainer>
       <LeftMessage>
         <MessageText>Questa settimana ho registrato 18 gradi</MessageText>
       </LeftMessage>
       <LeftMessage>
-        <StrongMessage>La temperatura di casa è perfetta</StrongMessage>
+        <StrongMessage>La temperatura è perfetta</StrongMessage>
         <MessageText>
           Fino a ora hai risparmiato 100€ Continua così!
         </MessageText>
       </LeftMessage>
-      <RightMessage>
-        <MessageText>ffffffffffffffffffffffffffffffffffffffffffffffHello</MessageText>
-      </RightMessage>
-      <RightMessage>
-        <MessageText>Hello</MessageText>
-      </RightMessage>
-      <RightMessage>
-        <MessageText>Hello</MessageText>
-      </RightMessage>
-      <RightMessage>
-        <MessageText>Hello</MessageText>
-      </RightMessage>
-      <RightMessage>
-        <MessageText>Hello</MessageText>
-      </RightMessage>
-      <RightMessage>
-        <MessageText>Hello</MessageText>
-      </RightMessage>
-      <RightMessage>
-        <MessageText>Hello</MessageText>
-      </RightMessage>
-      <RightMessage>
-        <MessageText>Hello</MessageText>
-      </RightMessage>
-      <RightMessage>
-        <MessageText>Hello</MessageText>
-      </RightMessage>
-      
+      </ModelContainer>
     </Container>
   );
 };

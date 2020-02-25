@@ -20,16 +20,28 @@ export const MessageText = styled.Text`
 
 export const LeftMessage = styled.View`
   border-radius: ${hp("4%")};
-  background-color: lightgrey;
+  background-color: #AAFFA0;
   max-width: 80%;
-  padding: 10px;
+  marginTop: 5;
+  marginBottom: 5;
+  marginLeft: 10;
+  marginRight: 10;
+  paddingLeft: 12;
+  paddingRight: 12;
+  paddingTop: 12;
+  paddingBottom: 12;
 `;
 
 export const RightMessage = styled(LeftMessage)`
-  background-color: red;
+  background-color: #F4FFBC;
   alignSelf: flex-end;
 `;
 
 export const StrongMessage = styled(MessageText)`
   font-weight: bold;
+`;
+
+export const ModelContainer = styled.View`
+  background-color: black;
+  marginTop: 50;
 `;
