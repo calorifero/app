@@ -11,13 +11,14 @@ import { darkTheme } from './common/theme/darkTheme';
 import { Theme } from './style';
 
 const App = () => {
-  console.log(useColorScheme());
   const theme = useColorScheme() === 'light' ? lightTheme : darkTheme;
   return (
     <Provider store={store}>
       <AppearanceProvider>
         <ThemeProvider theme={theme}>
-          <Home />
+          <SafeAreaView style={styles.container}>
+            <Home />
+          </SafeAreaView>
         </ThemeProvider>
       </AppearanceProvider>
     </Provider>
@@ -27,6 +28,7 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'transparent',
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0
   }
 });
