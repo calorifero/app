@@ -22,6 +22,8 @@ export const Description = styled.Text`
 export const DesignContainer = styled.View`
   display: flex;
   align-items: center;
-  flex-flow: row;
   justify-content: center;
+
+  border-radius: 50%;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.35);
 `;

@@ -8,9 +8,9 @@ export const Home = () => {
     <Container>
       <DesignContainer>
         <Logo />
+        <Header>Lorem</Header>
+        <Description>Ipsum dolor</Description>
       </DesignContainer>
-      <Header>Lorem</Header>
-      <Description>Ipsum dolor</Description>
     </Container>
   );
 };
