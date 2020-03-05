@@ -1,15 +1,17 @@
-import React from 'react';
-import { Text } from 'react-native';
-import { Container, Header, Description, DesignContainer } from './style';
-import { Logo } from './Logo/index';
+import React from "react";
+import { Text, View } from "react-native";
+import { Container, Header, Description, DesignContainer, Wrap } from "./style";
+import { Logo } from "./Logo/index";
 
 export const Home = () => {
   return (
     <Container>
       <DesignContainer>
-        <Logo />
-        <Header>Lorem</Header>
-        <Description>Ipsum dolor</Description>
+        <Wrap>
+          <Logo />
+          <Header>Lorem</Header>
+          <Description>Ipsum dolor</Description>
+        </Wrap>
       </DesignContainer>
     </Container>
   );
