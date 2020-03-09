@@ -40,4 +40,9 @@ margin-right: 40;
 margin-top: 20;
 padding: 10%;
 `;
-export const Wrap = styled.View``;
+export const FlexWrap = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  marginLeft: 40;
+  marginRight: 40;
+`;
