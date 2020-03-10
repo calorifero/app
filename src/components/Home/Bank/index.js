@@ -5,7 +5,7 @@ import { Container } from "./style";
 export const Bank = () => {
   return (
     <Container>
-      <Text h1>Hello</Text>
+      <Text>Hello</Text>
     </Container>
   );
 };
