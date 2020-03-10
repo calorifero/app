@@ -38,11 +38,30 @@ elevation: 5;
 margin-left: 40;
 margin-right: 40;
 margin-top: 20;
-padding: 10%;
 `;
 export const FlexWrap = styled.View`
   flex-direction: row;
   justify-content: space-between;
-  marginLeft: 40;
-  marginRight: 40;
+  margin-left: 40;
+  margin-right: 40;
+
+  margin-top: 20;
+`;
+export const TextBox = styled.View`
+  align-items: center;
+  justify-content: center;
+  background-color: ${props => props.theme.background};
+  shadowOffset: {
+    height: 0,
+    width: 0
+  }
+  border-radius: 50;
+  shadowColor: ${props => props.theme.text};
+  shadowOpacity: 0.50;
+  shadowRadius: 10;
+  elevation: 5;
+
+margin-left: 40;
+margin-right: 40;
+margin-top: 20;
 `;
