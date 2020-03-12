@@ -1,5 +1,5 @@
+import styled from 'styled-components/native';
 
-import styled from "styled-components/native";
 export const Container = styled.View`
   display: flex;
   align-items: center;
@@ -14,5 +14,4 @@ export const Container = styled.View`
   shadowOpacity: 0.50;
   shadowRadius: 10;
   elevation: 5;
-  margin-right: 10;
 `;

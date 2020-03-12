@@ -1,0 +1,80 @@
+Arguments: 
+  /usr/bin/node /usr/bin/yarn install
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  13.10.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (/usr/lib/node_modules/yarn/lib/cli.js:141375:19)
+      at Object.onceWrapper (events.js:422:28)
+      at ClientRequest.emit (events.js:316:20)
+      at TLSSocket.emitRequestTimeout (_http_client.js:721:9)
+      at Object.onceWrapper (events.js:422:28)
+      at TLSSocket.emit (events.js:316:20)
+      at TLSSocket.Socket._onTimeout (net.js:479:8)
+      at listOnTimeout (internal/timers.js:549:17)
+      at processTimers (internal/timers.js:492:7)
+
+npm manifest: 
+  {
+    "main": "node_modules/expo/AppEntry.js",
+    "scripts": {
+      "start": "expo start",
+      "android": "expo start --android",
+      "ios": "expo start --ios",
+      "web": "expo start --web",
+      "build-android": "expo build:android",
+      "eject": "expo eject",
+      "prettier": "prettier --write \"./**/*.js\""
+    },
+    "dependencies": {
+      "expo": "~36.0.0",
+      "expo-cli": "^3.11.7",
+      "react": "~16.9.0",
+      "react-dom": "~16.9.0",
+      "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
+      "react-native-appearance": "~0.3.1",
+      "react-native-responsive-screen": "^1.4.0",
+      "react-native-smartconfig-2": "^1.3.0",
+      "react-native-smartconfig-3": "^0.3.3",
+      "react-native-svg": "9.13.3",
+      "react-native-web": "~0.11.7",
+      "react-native-wifi": "^1.0.1",
+      "react-primitives": "^0.8.0",
+      "react-redux": "^7.1.3",
+      "redux": "^4.0.5",
+      "redux-thunk": "^2.3.0",
+      "styled-components": "^5.0.0",
+      "styled-theming": "^2.2.0"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.0.0",
+      "babel-eslint": "^10.1.0",
+      "babel-preset-expo": "~8.0.0",
+      "eslint": "^6.8.0",
+      "eslint-config-airbnb": "^18.0.1",
+      "eslint-config-prettier": "^6.10.0",
+      "eslint-plugin-import": "^2.20.1",
+      "eslint-plugin-jsx-a11y": "^6.2.3",
+      "eslint-plugin-prettier": "^3.1.2",
+      "eslint-plugin-react": "^7.18.3",
+      "prettier": "^1.19.1"
+    },
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
