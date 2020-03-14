@@ -8,6 +8,12 @@ import styled from 'styled-components/native';
 export const Container = styled.ScrollView`
   flex: 1;
   background-color: ${props => props.theme.background};
+
+  margin-left: 5;
+  margin-right: 5;
+  padding-left: 20;
+  padding-right: 20;
+  padding-top: 20;
 `;
 
 export const Header = styled.Text`
@@ -22,22 +28,21 @@ export const Description = styled.Text`
   text-align: center;
 `;
 export const DesignContainer = styled.View`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: ${props => props.theme.background};
-  shadowOffset: {
-  height: 0,
-  width: 0
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: ${props => props.theme.background};
+shadowOffset: {
+height: 0,
+width: 0
 }
-  border-radius: 50;
-  shadowColor: ${props => props.theme.text};
+border-radius: 50;
+shadowColor: ${props => props.theme.text};
 shadowOpacity: 0.50;
 shadowRadius: 10;
+width: 100%;
+min-height: 50%;
 elevation: 5;
-margin-left: 40;
-margin-right: 40;
-margin-top: 20;
 `;
 export const FlexWrap = styled.View`
   flex-direction: row;

@@ -14,22 +14,17 @@ import {
 import { Logo } from './Logo/index';
 import { Bank } from './Bank/index';
 import { Temperature } from './Temperature/index';
+import { TopContainer } from './TopContainer/index';
 
 export const Home = () => {
   return (
     <Container>
-      <DesignContainer>
-        <BigSvg>
-          <Logo />
-        </BigSvg>
-        <Header>Lorem</Header>
-        <Description>Ipsum dolor</Description>
-      </DesignContainer>
+      <TopContainer />
       <FlexWrap>
         <Bank />
         <MiniLogo>
           <SmallSvg>
-            <Logo scale="100%" />
+            <Logo />
           </SmallSvg>
         </MiniLogo>
         <Temperature />
