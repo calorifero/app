@@ -47,8 +47,6 @@ elevation: 5;
 export const FlexWrap = styled.View`
   flex-direction: row;
   justify-content: space-between;
-  margin-left: 40;
-  margin-right: 40;
 
   margin-top: 20;
   align-content: stretch;
@@ -61,14 +59,10 @@ export const TextBox = styled.View`
     height: 0,
     width: 0
   }
-  border-radius: 50;
   shadowColor: ${props => props.theme.text};
   shadowOpacity: 0.50;
   shadowRadius: 10;
   elevation: 5;
-
-margin-left: 40;
-margin-right: 40;
 margin-top: 20;
 `;
 
@@ -81,20 +75,17 @@ export const MiniLogo = styled.View`
     height: 0,
     width: 0
   }
-  border-radius: 50;
+  border-radius: 30;
   shadowColor: ${props => props.theme.text};
   shadowOpacity: 0.50;
   shadowRadius: 10;
   elevation: 5;
   flex: 1;
-`;
-
-export const BigSvg = styled.View`
-  width: 70%;
-  height: 70%;
+  padding-top: 10;
+  padding-bottom: 10;
 `;
 
 export const SmallSvg = styled.View`
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 80;
 `;

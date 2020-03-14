@@ -9,7 +9,7 @@ export const Container = styled.View`
     height: 0,
     width: 0
   }
-  border-radius: 50;
+  border-radius: 30;
   shadowColor: ${props => props.theme.text};
   shadowOpacity: 0.50;
   shadowRadius: 10;
