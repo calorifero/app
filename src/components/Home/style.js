@@ -73,4 +73,5 @@ elevation: 5;
 flex: 1;
 padding-top: 10;
 padding-bottom: 10;
+display: ${props => props.visibility};
 `;
