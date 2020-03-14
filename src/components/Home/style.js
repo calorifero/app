@@ -1,9 +1,9 @@
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp
-} from "react-native-responsive-screen";
+} from 'react-native-responsive-screen';
 
-import styled from "styled-components/native";
+import styled from 'styled-components/native';
 
 export const Container = styled.ScrollView`
   flex: 1;
@@ -12,11 +12,11 @@ export const Container = styled.ScrollView`
 
 export const Header = styled.Text`
   text-align: center;
-  font-size: ${hp("8%")}
+  font-size: ${hp('8%')}
   color: ${props => props.theme.text};
 `;
 export const Description = styled.Text`
-  font-size: ${hp("2.5%")};
+  font-size: ${hp('2.5%')};
 
   color: ${props => props.theme.text};
   text-align: center;
@@ -46,6 +46,7 @@ export const FlexWrap = styled.View`
   margin-right: 40;
 
   margin-top: 20;
+  align-content: stretch;
 `;
 export const TextBox = styled.View`
   align-items: center;
@@ -64,4 +65,31 @@ export const TextBox = styled.View`
 margin-left: 40;
 margin-right: 40;
 margin-top: 20;
+`;
+
+export const MiniLogo = styled.View`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${props => props.theme.background};
+  shadowOffset: {
+    height: 0,
+    width: 0
+  }
+  border-radius: 50;
+  shadowColor: ${props => props.theme.text};
+  shadowOpacity: 0.50;
+  shadowRadius: 10;
+  elevation: 5;
+  flex: 1;
+`;
+
+export const BigSvg = styled.View`
+  width: 70%;
+  height: 70%;
+`;
+
+export const SmallSvg = styled.View`
+  width: 50%;
+  height: 50%;
 `;
