@@ -1,11 +1,10 @@
-import React from "react";
-import { Text, View } from "react-native";
-import { Container } from "./style";
+import React from 'react';
+import { Text, View } from 'react-native';
 
 export const Bank = () => {
   return (
-    <Container>
+    <View>
       <Text>Hello</Text>
-    </Container>
+    </View>
   );
 };

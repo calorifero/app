@@ -9,7 +9,8 @@ import {
   TextBox,
   MiniLogo,
   BigSvg,
-  SmallSvg
+  SmallSvg,
+  Mini
 } from './style';
 import { Logo } from './Logo/index';
 import { Bank } from './Bank/index';
@@ -21,13 +22,17 @@ export const Home = () => {
     <Container>
       <TopContainer />
       <FlexWrap>
-        <Bank />
-        <MiniLogo>
+        <Mini>
+          <Bank />
+        </Mini>
+        <Mini>
           <SmallSvg>
             <Logo />
           </SmallSvg>
-        </MiniLogo>
-        <Temperature />
+        </Mini>
+        <Mini>
+          <Temperature />
+        </Mini>
       </FlexWrap>
       <TextBox>
         <Text>Lorem ipsum dolor sin amet</Text>
