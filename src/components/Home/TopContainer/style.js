@@ -21,6 +21,7 @@ export const Container = styled.View`
   elevation: 5;
   padding-top: 35;
   padding-bottom: 25;
+  min-height: 300;
 `;
 
 export const Header = styled.Text`

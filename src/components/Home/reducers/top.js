@@ -1,29 +1,29 @@
 export const TOP = (
     state = {
-        logo: 'none',
-        temperature: 'flex',
-        bank: 'flex'
+        logo: 0,
+        temperature: 1,
+        bank: 1
     },
     action
 ) => {
     switch (action.type) {
         case 'SHOW_LOGO':
             return {
-                logo: 'none',
-                temperature: 'flex',
-                bank: 'flex'
+                logo: 0,
+                temperature: 1,
+                bank: 1
             };
         case 'SHOW_TEMPERATURE':
             return {
-                logo: 'flex',
-                temperature: 'none',
-                bank: 'flex'
+                logo: 1,
+                temperature: 0,
+                bank: 1
             };
         case 'SHOW_BANK':
             return {
-                logo: 'flex',
-                temperature: 'flex',
-                bank: 'none'
+                logo: 1,
+                temperature: 1,
+                bank: 0
             };
         default:
             return state;

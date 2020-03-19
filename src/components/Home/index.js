@@ -1,5 +1,5 @@
-import React from 'react';
-import { Text, View } from 'react-native';
+import React, { useEffect } from 'react';
+import { Text, View, Animated, TouchableOpacity } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   Container,
@@ -17,27 +17,20 @@ import { Logo } from './Logo/index';
 import { Bank } from './Bank/index';
 import { Temperature } from './Temperature/index';
 import { TopContainer } from './TopContainer/index';
-import { SHOW_TEMPERATURE } from './action';
+import { SHOW_TEMPERATURE, SHOW_LOGO, SHOW_BANK } from './action';
 
 export const Home = () => {
   const top = useSelector(state => state.top);
   const dispatch = useDispatch();
-  // dispatch(SHOW_TEMPERATURE());
+
+  const temperature = new Animated.Value(0);
   return (
     <Container>
       <TopContainer />
       <FlexWrap>
-        <Mini visibility={top.bank}>
-          <Bank />
-        </Mini>
-        <Mini visibility={top.logo}>
-          <SmallSvg>
-            <Logo />
-          </SmallSvg>
-        </Mini>
-        <Mini visibility={top.temperature}>
-          <Temperature />
-        </Mini>
+        {top.temperature ? <Mini onPress={() => dispatch(SHOW_TEMPERATURE())}><Temperature /></Mini> : null}
+        {top.logo ? <Mini onPress={() => dispatch(SHOW_LOGO())}><Logo /></Mini>: null}
+        {top.bank ? <Mini onPress={() => dispatch(SHOW_BANK())}><Bank /></Mini>: null}
       </FlexWrap>
       <TextBox>
         <Text>Lorem ipsum dolor sin amet</Text>

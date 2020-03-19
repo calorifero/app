@@ -1,10 +1,11 @@
 import React from 'react';
 import { Text, View } from 'react-native';
+import { Container, Temperature } from './style'
 
 export const Bank = () => {
   return (
-    <View>
-      <Text>Hello</Text>
-    </View>
+    <Container>
+      <Temperature>30°</Temperature>
+    </Container>
   );
 };

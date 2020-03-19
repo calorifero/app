@@ -14,6 +14,7 @@ export const Container = styled.ScrollView`
   padding-left: 20;
   padding-right: 20;
   padding-top: 20;
+
 `;
 
 export const Header = styled.Text`
@@ -52,11 +53,9 @@ margin-top: 20;
 export const MiniLogo = styled.View``;
 
 export const SmallSvg = styled.View`
-  width: 100%;
-  height: 80;
 `;
 
-export const Mini = styled.View`
+export const Mini = styled.TouchableOpacity`
 display: flex;
 align-items: center;
 justify-content: center;
@@ -65,7 +64,7 @@ shadowOffset: {
   height: 0,
   width: 0
 }
-border-radius: 30;
+border-radius: 20;
 shadowColor: ${props => props.theme.text};
 shadowOpacity: 0.50;
 shadowRadius: 10;
@@ -73,5 +72,6 @@ elevation: 5;
 flex: 1;
 padding-top: 10;
 padding-bottom: 10;
-display: ${props => props.visibility};
+min-height: 100;
+max-height: 100;
 `;

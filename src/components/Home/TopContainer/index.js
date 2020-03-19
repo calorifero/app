@@ -4,15 +4,16 @@ import { Container, Header, Description, BigSvg } from './style';
 import { Logo } from '../Logo/index';
 import { Bank } from '../Bank/index';
 import { Temperature } from '../Temperature/index';
+import { useSelector } from 'react-redux';
 
 export const TopContainer = () => {
+    const top = useSelector(state => state.top);
     return (
-        <Container>
-            <BigSvg>
-                <Logo />
-            </BigSvg>
-            <Header>Lorem</Header>
-            <Description>Ipsum dolor</Description>
-        </Container>
+        <View >
+        {!top.temperature ? <Container><Temperature /></Container> : null}
+        {!top.logo ? <Container><BigSvg><Logo /></BigSvg><Header>Lorem</Header><Description>Ipsum dolor</Description></Container> : null}
+        {!top.bank ? <Container><Bank /></Container> : null}
+        </View>
+
     );
 };
