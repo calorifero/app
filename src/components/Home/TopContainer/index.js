@@ -2,8 +2,8 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import { Container, Header, Description, BigSvg } from './style';
 import { Logo } from '../Logo/index';
-import { Bank } from '../Big/Bank/index';
-import { Temperature } from '../Big/Temperature/index';
+import { Bank } from '../Bank/Big/index';
+import { Temperature } from '../Temperature/Big/index';
 import { useSelector } from 'react-redux';
 
 export const TopContainer = () => {

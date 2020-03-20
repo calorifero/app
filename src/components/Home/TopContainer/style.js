@@ -6,8 +6,6 @@ import {
 
 export const Container = styled.View`
   display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: ${props => props.theme.background};
   shadowOffset: {
   height: 0,
@@ -17,11 +15,12 @@ export const Container = styled.View`
   shadowColor: ${props => props.theme.text};
   shadowOpacity: 0.50;
   shadowRadius: 10;
-  width: 100%;
   elevation: 5;
-  padding-top: 35;
-  padding-bottom: 25;
-  min-height: 300;
+  paddingTop: 20;
+  paddingBottom: 20;
+  paddingLeft: 20;
+  paddingRight: 20;
+  
 `;
 
 export const Header = styled.Text`

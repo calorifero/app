@@ -14,8 +14,8 @@ import {
   Mini
 } from './style';
 import { Logo } from './Logo/index';
-import { Bank } from './Mini/Bank/index';
-import { Temperature } from './Mini/Temperature/index';
+import { Bank } from './Bank/Mini/index';
+import { Temperature } from './Temperature/Mini/index';
 import { TopContainer } from './TopContainer/index';
 import { SHOW_TEMPERATURE, SHOW_LOGO, SHOW_BANK } from './action';
 
