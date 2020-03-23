@@ -4,6 +4,6 @@ export const Container = styled.View`
   text-align: left;
 `
 
-export const Temperature = styled.Text`
+export const Money = styled.Text`
   font-size: 30;
 `;

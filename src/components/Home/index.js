@@ -18,6 +18,10 @@ import { Bank } from './Bank/Mini/index';
 import { Temperature } from './Temperature/Mini/index';
 import { TopContainer } from './TopContainer/index';
 import { SHOW_TEMPERATURE, SHOW_LOGO, SHOW_BANK } from './action';
+import * as Animatable from 'react-native-animatable';
+
+const AnimatedMini = Animatable.createAnimatableComponent(Mini);
+
 
 export const Home = () => {
   const top = useSelector(state => state.top);
@@ -28,9 +32,12 @@ export const Home = () => {
     <Container>
       <TopContainer />
       <FlexWrap>
-        {top.temperature ? <Mini onPress={() => dispatch(SHOW_TEMPERATURE())}><Temperature /></Mini> : null}
-        {top.logo ? <Mini onPress={() => dispatch(SHOW_LOGO())}><Logo /></Mini>: null}
-        {top.bank ? <Mini onPress={() => dispatch(SHOW_BANK())}><Bank /></Mini>: null}
+        {top.temperature ? <AnimatedMini      animation="zoomIn" duration="200"
+      useNativeDriver={true} onPress={() => dispatch(SHOW_TEMPERATURE())}><Temperature /></AnimatedMini> : null}
+        {top.logo ? <AnimatedMini animation="zoomIn" duration="200"
+      useNativeDriver={true}  onPress={() => dispatch(SHOW_LOGO())}><Logo /></AnimatedMini>: null}
+        {top.bank ? <AnimatedMini animation="zoomIn" duration="200"
+      useNativeDriver={true} onPress={() => dispatch(SHOW_BANK())}><Bank /></AnimatedMini>: null}
       </FlexWrap>
       <TextBox>
         <Text>Lorem ipsum dolor sin amet</Text>

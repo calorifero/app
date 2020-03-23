@@ -1,11 +1,11 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { Container, Temperature } from './style'
+import { Container, Money } from './style'
 
 export const Bank = () => {
   return (
     <Container>
-      <Temperature>30°</Temperature>
+      <Money>30°</Money>
     </Container>
   );
 };
