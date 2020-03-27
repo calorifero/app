@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Text, View, Animated, TouchableOpacity } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import {
@@ -26,14 +26,14 @@ const AnimatedMini = Animatable.createAnimatableComponent(Mini);
 export const Home = () => {
   const top = useSelector(state => state.top);
   const dispatch = useDispatch();
-
+  const [temp, changeTemp] = useState(0);
   const temperature = new Animated.Value(0);
   return (
     <Container>
       <TopContainer />
       <FlexWrap>
-        {top.temperature ? <AnimatedMini      animation="zoomIn" duration="200"
-      useNativeDriver={true} onPress={() => dispatch(SHOW_TEMPERATURE())}><Temperature /></AnimatedMini> : null}
+        {top.temperature ? <AnimatedMini      animation={!temp ? "zoomIn": "fadeOut"} onAnimationEnd={() => {console.log(temp); if (temp === 1) {dispatch(SHOW_TEMPERATURE()); changeTemp(0)} }} duration="200"
+      useNativeDriver={true} onPress={() => changeTemp(1)}><Temperature /></AnimatedMini> : null}
         {top.logo ? <AnimatedMini animation="zoomIn" duration="200"
       useNativeDriver={true}  onPress={() => dispatch(SHOW_LOGO())}><Logo /></AnimatedMini>: null}
         {top.bank ? <AnimatedMini animation="zoomIn" duration="200"
