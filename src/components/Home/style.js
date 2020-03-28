@@ -56,6 +56,7 @@ export const SmallSvg = styled.View`
 `;
 
 export const Mini = styled.TouchableOpacity`
+position: relative;
 display: flex;
 align-items: center;
 justify-content: center;

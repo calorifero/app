@@ -32,12 +32,12 @@ export const Home = () => {
     <Container>
       <TopContainer />
       <FlexWrap>
-        {top.temperature ? <AnimatedMini      animation={!temp ? "zoomIn": "fadeOut"} onAnimationEnd={() => {console.log(temp); if (temp === 1) {dispatch(SHOW_TEMPERATURE()); changeTemp(0)} }} duration="200"
-      useNativeDriver={true} onPress={() => changeTemp(1)}><Temperature /></AnimatedMini> : null}
+        {top.temperature ? <AnimatedMini      animation={!temp ? "zoomIn": "zoomOut"} onAnimationEnd={() => {console.log(temp); if (temp === 1) {dispatch(SHOW_TEMPERATURE()); changeTemp(0)} }} duration="1000"
+      useNativeDriver={true} activeOpacity={0.6} onPressIn={() => changeTemp(1)}><Temperature /></AnimatedMini> : null}
         {top.logo ? <AnimatedMini animation="zoomIn" duration="200"
-      useNativeDriver={true}  onPress={() => dispatch(SHOW_LOGO())}><Logo /></AnimatedMini>: null}
+      useNativeDriver={true} activeOpacity={0.6}  onPressIn={() => dispatch(SHOW_LOGO())}><Logo /></AnimatedMini>: null}
         {top.bank ? <AnimatedMini animation="zoomIn" duration="200"
-      useNativeDriver={true} onPress={() => dispatch(SHOW_BANK())}><Bank /></AnimatedMini>: null}
+      useNativeDriver={true} activeOpacity={0.6} onPressIn={() => dispatch(SHOW_BANK())}><Bank /></AnimatedMini>: null}
       </FlexWrap>
       <TextBox>
         <Text>Lorem ipsum dolor sin amet</Text>
