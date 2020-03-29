@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { Container, Money } from './style'
+import { Container, Money } from './style';
 
 export const Bank = () => {
   return (

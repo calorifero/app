@@ -14,7 +14,6 @@ export const Container = styled.ScrollView`
   padding-left: 20;
   padding-right: 20;
   padding-top: 20;
-
 `;
 
 export const Header = styled.Text`
@@ -52,8 +51,7 @@ margin-top: 20;
 
 export const MiniLogo = styled.View``;
 
-export const SmallSvg = styled.View`
-`;
+export const SmallSvg = styled.View``;
 
 export const Mini = styled.TouchableOpacity`
 position: relative;
