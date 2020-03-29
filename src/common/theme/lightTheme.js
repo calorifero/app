@@ -1,4 +1,4 @@
 export const lightTheme = {
-  background: "#FFFFFF",
-  text: "#000"
+  background: '#FFFFFF',
+  text: '#000'
 };
