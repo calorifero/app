@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Text, View, Animated, TouchableOpacity } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import * as Animatable from 'react-native-animatable';
@@ -18,44 +18,45 @@ import { Logo } from './Logo/index';
 import { Bank } from './Bank/Mini/index';
 import { Temperature } from './Temperature/Mini/index';
 import { TopContainer } from './TopContainer/index';
-import { SHOW_TEMPERATURE, SHOW_LOGO, SHOW_BANK } from './action';
+import { SHOW_TEMPERATURE, SHOW_LOGO, SHOW_BANK, ANIMATE_TEMPERATURE, ANIMATE_LOGO, ANIMATE_BANK } from './action';
 
 const AnimatedMini = Animatable.createAnimatableComponent(Mini);
 
 export const Home = () => {
   const top = useSelector(state => state.top);
+    const animation = useSelector(state => state.animation);
   const dispatch = useDispatch();
-  const [temp, changeTemp] = useState(0);
-  const [log, changeLog] = useState(0);
-  const [ban, changeBan] = useState(0);
   return (
     <Container>
       <TopContainer />
       <FlexWrap>
         {top.temperature ? (
           <AnimatedMini
-            animation={temp ? 'slideOutUp' : 'zoomInDown'}
+            animation={animation.temperature ? 'zoomOut' : 'zoomIn'}
             onAnimationEnd={() => {
-              if (temp === 1) {
+              if (animation.temperature === true) {
+              dispatch(ANIMATE_TEMPERATURE(false));
                 dispatch(SHOW_TEMPERATURE());
-                changeTemp(0);
+
               }
             }}
             duration="300"
             useNativeDriver
             activeOpacity={0.6}
-            onPressIn={() => changeTemp(1)}>
+            onPressIn={() =>
+            dispatch(ANIMATE_TEMPERATURE(true))}>
             <Temperature />
           </AnimatedMini>
         ) : null}
         {top.logo ? (
           <AnimatedMini
-            animation={!log ? 'slideOutUp' : 'zoomInDown'}
-            onPressIn={() => changeLog(1)}
+            animation={animation.logo ? 'zoomOut' : 'zoomIn'}
+            onPressIn={() => dispatch(ANIMATE_LOGO(true))}
             onAnimationEnd={() => {
-              if (log === 1) {
+              if (animation.logo === true) {
+              dispatch(ANIMATE_LOGO(false));
                 dispatch(SHOW_LOGO());
-                changeLog(0);
+
               }
             }}
             duration="300"
@@ -69,12 +70,13 @@ export const Home = () => {
             duration="300"
             useNativeDriver
             activeOpacity={0.6}
-            onPressIn={() => changeBan(1)}
-            animation={!ban ? 'slideOutUp' : 'zoomInDown'}
+            onPressIn={() => dispatch(ANIMATE_BANK(true))}
+            animation={animation.bank ? 'zoomOut' : 'zoomIn'}
             onAnimationEnd={() => {
-              if (ban === 1) {
+              if (animation.bank === true) {
+              dispatch(ANIMATE_BANK(false));
                 dispatch(SHOW_BANK());
-                changeBan(0);
+
               }
             }}>
             <Bank />
