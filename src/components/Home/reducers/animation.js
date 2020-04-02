@@ -9,7 +9,7 @@ export const ANIMATION = (
   switch (action.type) {
     case 'ANIMATE_TEMPERATURE':
       return {
-        temperature: action.payload,
+        temperature: action.payload
       };
     case 'ANIMATE_LOGO':
       return {
@@ -17,7 +17,7 @@ export const ANIMATION = (
       };
     case 'ANIMATE_BANK':
       return {
-        bank: action.payload,
+        bank: action.payload
       };
     default:
       return state;
