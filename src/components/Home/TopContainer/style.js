@@ -6,7 +6,7 @@ import {
 
 export const Container = styled.View`
   display: flex;
-  background-color: ${props => props.theme.background};
+  background-color: ${props => props.color};
   shadowOffset: {
   height: 0,
   width: 0
@@ -20,6 +20,8 @@ export const Container = styled.View`
   paddingBottom: 20;
   paddingLeft: 20;
   paddingRight: 20;
+
+  zIndex:999;  
 `;
 
 export const Header = styled.Text`

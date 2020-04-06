@@ -20,3 +20,9 @@ export const ANIMATE_BANK = payload => ({
   type: 'ANIMATE_BANK',
   payload
 });
+export const GOOD = () => ({
+  type: 'GOOD'
+});
+export const BAD = () => ({
+  type: 'BAD'
+})

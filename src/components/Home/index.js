@@ -25,7 +25,9 @@ import {
   SHOW_BANK,
   ANIMATE_TEMPERATURE,
   ANIMATE_LOGO,
-  ANIMATE_BANK
+  ANIMATE_BANK,
+  GOOD,
+  BAD
 } from './action';
 
 const AnimatedMini = Animatable.createAnimatableComponent(Mini);
@@ -33,9 +35,11 @@ const AnimatedMini = Animatable.createAnimatableComponent(Mini);
 export const Home = () => {
   const top = useSelector(state => state.top);
   const animation = useSelector(state => state.animation);
+  const temperatureStatus = useSelector(state => state.temperatureStatus);
   const dispatch = useDispatch();
   return (
     <Container>
+      <Text>Ultimo aggiornamento: ieri</Text>
       <TopContainer />
       <FlexWrap>
         {top.temperature ? (

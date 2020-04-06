@@ -12,15 +12,17 @@ const AnimatedContainer = Animatable.createAnimatableComponent(Container);
 export const TopContainer = () => {
   const top = useSelector(state => state.top);
   const animation = useSelector(state => state.animation);
+  const color = useSelector(state => state.temperatureStatus)
+  console.log(color)
   return (
     <View>
       {!top.temperature ? (
-        <AnimatedContainer animation="zoomIn" duration="300" useNativeDriver>
+        <AnimatedContainer color={color.color} animation="zoomIn" duration="300" useNativeDriver>
           <Temperature />
         </AnimatedContainer>
       ) : null}
       {!top.logo ? (
-        <AnimatedContainer animation="zoomIn" duration="300" useNativeDriver>
+        <AnimatedContainer color={color.color} animation="zoomIn" duration="300" useNativeDriver>
           <BigSvg>
             <Logo />
           </BigSvg>
@@ -29,7 +31,7 @@ export const TopContainer = () => {
         </AnimatedContainer>
       ) : null}
       {!top.bank ? (
-        <AnimatedContainer animation="zoomIn" duration="300" useNativeDriver>
+        <AnimatedContainer color="red" animation="zoomIn" duration="300" useNativeDriver>
           <Bank />
         </AnimatedContainer>
       ) : null}

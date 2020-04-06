@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux'
 import Svg, { G, Rect, Circle, Defs, LinearGradient, Stop } from 'react-native-svg';
 import {
   widthPercentageToDP as wp,
@@ -8,12 +9,14 @@ import {
 import { View, StyleSheet } from 'react-native';
 
 export const Logo = props => {
+  const status = useSelector(state => state.temperatureStatus);
+  console.log(status)
   return (
     <Svg height="100%" width="100%" viewBox="0 0 205 166" {...props}>
       <Defs>
         <LinearGradient id="prefix__a" x1={0.5} x2={0.5} y2={1} gradientUnits="objectBoundingBox">
-          <Stop offset={0} stopColor="#13dfff" />
-          <Stop offset={1} stopColor="#84f37b" />
+          <Stop offset={0} stopColor={status.gradientColors.first} />
+          <Stop offset={1} stopColor={status.gradientColors.second} />
         </LinearGradient>
       </Defs>
       <G transform="translate(-78 -125)" fill="url(#prefix__a)">
