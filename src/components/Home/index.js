@@ -32,10 +32,12 @@ import {
 
 const AnimatedMini = Animatable.createAnimatableComponent(Mini);
 
+
+
 export const Home = () => {
   const top = useSelector(state => state.top);
   const animation = useSelector(state => state.animation);
-  const temperatureStatus = useSelector(state => state.temperatureStatus);
+  const color = useSelector(state => state.temperatureStatus);
   const dispatch = useDispatch();
   return (
     <Container>
@@ -43,15 +45,16 @@ export const Home = () => {
       <TopContainer />
       <FlexWrap>
         {top.temperature ? (
-          <AnimatedMini
-            animation={animation.temperature ? 'zoomOut' : 'zoomIn'}
+          <AnimatedMini 
+          color={color.color}
+            animation={animation.temperature ? "zoomOut" : 'fadeIn'}
             onAnimationEnd={() => {
               if (animation.temperature === true) {
                 dispatch(ANIMATE_TEMPERATURE(false));
                 dispatch(SHOW_TEMPERATURE());
               }
             }}
-            duration="300"
+            duration="500"
             useNativeDriver
             activeOpacity={0.6}
             onPressIn={() => {
@@ -63,7 +66,8 @@ export const Home = () => {
         ) : null}
         {top.logo ? (
           <AnimatedMini
-            animation={animation.logo ? 'zoomOut' : 'zoomIn'}
+          color={color.color}
+            animation={animation.logo ? "zoomOut" : 'fadeIn'}
             onPressIn={() => {
               dispatch(ANIMATE_LOGO(true));
               Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
@@ -74,7 +78,7 @@ export const Home = () => {
                 dispatch(SHOW_LOGO());
               }
             }}
-            duration="300"
+            duration="500"
             useNativeDriver
             activeOpacity={0.6}>
             <Logo />
@@ -82,14 +86,16 @@ export const Home = () => {
         ) : null}
         {top.bank ? (
           <AnimatedMini
-            duration="300"
+            duration="500"
+color="rgba(218,165,32, 0.5)"
+          
             useNativeDriver
             activeOpacity={0.6}
             onPressIn={() => {
               dispatch(ANIMATE_BANK(true));
               Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
             }}
-            animation={animation.bank ? 'zoomOut' : 'zoomIn'}
+            animation={animation.bank ? "zoomOut" : 'fadeIn'}
             onAnimationEnd={() => {
               if (animation.bank === true) {
                 dispatch(ANIMATE_BANK(false));

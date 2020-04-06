@@ -58,7 +58,7 @@ position: relative;
 display: flex;
 align-items: center;
 justify-content: center;
-background-color: ${props => props.theme.background};
+background-color: ${props => props.color};
 shadowOffset: {
   height: 0,
   width: 0

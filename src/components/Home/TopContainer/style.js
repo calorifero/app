@@ -20,8 +20,6 @@ export const Container = styled.View`
   paddingBottom: 20;
   paddingLeft: 20;
   paddingRight: 20;
-
-  zIndex:999;  
 `;
 
 export const Header = styled.Text`

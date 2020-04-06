@@ -5,7 +5,7 @@ import { Container, Money } from './style';
 export const Bank = () => {
   return (
     <Container>
-      <Money>30°</Money>
+      <Money>30€</Money>
     </Container>
   );
 };

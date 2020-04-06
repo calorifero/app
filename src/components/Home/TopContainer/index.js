@@ -13,16 +13,15 @@ export const TopContainer = () => {
   const top = useSelector(state => state.top);
   const animation = useSelector(state => state.animation);
   const color = useSelector(state => state.temperatureStatus)
-  console.log(color)
   return (
     <View>
       {!top.temperature ? (
-        <AnimatedContainer color={color.color} animation="zoomIn" duration="300" useNativeDriver>
+        <AnimatedContainer color={color.color} animation="zoomIn" duration="200" useNativeDriver>
           <Temperature />
         </AnimatedContainer>
       ) : null}
       {!top.logo ? (
-        <AnimatedContainer color={color.color} animation="zoomIn" duration="300" useNativeDriver>
+        <AnimatedContainer color={color.color} animation="zoomIn" duration="200" useNativeDriver>
           <BigSvg>
             <Logo />
           </BigSvg>
@@ -31,7 +30,8 @@ export const TopContainer = () => {
         </AnimatedContainer>
       ) : null}
       {!top.bank ? (
-        <AnimatedContainer color="red" animation="zoomIn" duration="300" useNativeDriver>
+        <AnimatedContainer 
+color="rgba(218,165,32, 0.5)" animation="zoomIn" duration="200" useNativeDriver>
           <Bank />
         </AnimatedContainer>
       ) : null}
