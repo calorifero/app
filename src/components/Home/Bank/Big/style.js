@@ -7,7 +7,9 @@ export const Container = styled.View`
 `;
 export const TopText = styled.Text`
   font-size: 30;
+  color: ${props => props.theme.text.accent};
 `;
 export const Money = styled.Text`
   font-size: 100;
+  color: ${props => props.theme.text.accent}
 `;

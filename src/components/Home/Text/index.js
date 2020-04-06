@@ -1,11 +1,12 @@
 import React from "react";
-import { Text, View } from "react-native";
-import { Container } from "./style";
+import { View } from "react-native";
+import { Container, Header, Body } from "./style";
 
 export const Text = () => {
   return (
     <Container>
-      <Text h1>Hello</Text>
+      <Header>Hello</Header>
+      <Body>Lorem ipsum dolor sin amet</Body>
     </Container>
   );
 };

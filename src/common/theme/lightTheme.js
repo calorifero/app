@@ -1,4 +1,8 @@
 export const lightTheme = {
+  mode: "light",
   background: '#FFFFFF',
-  text: '#000'
+  text: {
+    accent: "rgba(0,0,0,0.9)",
+    secondary: "rgba(0,0,0,0.6)"
+  }
 };

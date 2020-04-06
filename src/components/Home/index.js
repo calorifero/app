@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Text, View, Animated, TouchableOpacity } from 'react-native';
+import { View, Animated, TouchableOpacity } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import * as Animatable from 'react-native-animatable';
 import * as Haptics from 'expo-haptics';
@@ -13,7 +13,8 @@ import {
   MiniLogo,
   BigSvg,
   SmallSvg,
-  Mini
+  Mini,
+  LatestUpdate
 } from './style';
 import { Logo } from './Logo/index';
 import { Bank } from './Bank/Mini/index';
@@ -29,6 +30,7 @@ import {
   GOOD,
   BAD
 } from './action';
+import { Text } from './Text/index'
 
 const AnimatedMini = Animatable.createAnimatableComponent(Mini);
 
@@ -39,9 +41,10 @@ export const Home = () => {
   const animation = useSelector(state => state.animation);
   const color = useSelector(state => state.temperatureStatus);
   const dispatch = useDispatch();
+
   return (
     <Container>
-      <Text>Ultimo aggiornamento: ieri</Text>
+      <LatestUpdate>Ultimo aggiornamento: ieri</LatestUpdate>
       <TopContainer />
       <FlexWrap>
         {top.temperature ? (
@@ -106,12 +109,7 @@ color="rgba(218,165,32, 0.5)"
           </AnimatedMini>
         ) : null}
       </FlexWrap>
-      <TextBox>
-        <Text>Lorem ipsum dolor sin amet</Text>
-      </TextBox>
-      <TextBox>
-        <Text>Lorem ipsum dolor sin amet</Text>
-      </TextBox>
+      <Text />
     </Container>
   );
 };

@@ -25,7 +25,7 @@ export const TEMPERATURE_STATUS = (
           first: '#ff0000',
           second: '#f10bc0'
         },
-        color: "rgba(255,0,0, 0.5)"
+        color: "rgba(220,20,60, 0.5)"
       };
     default:
       return state;

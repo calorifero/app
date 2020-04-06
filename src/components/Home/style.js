@@ -19,12 +19,12 @@ export const Container = styled.ScrollView`
 export const Header = styled.Text`
   text-align: center;
   font-size: ${hp('8%')}
-  color: ${props => props.theme.text};
+  color: ${props => props.theme.text.accent};
 `;
 export const Description = styled.Text`
   font-size: ${hp('2.5%')};
 
-  color: ${props => props.theme.text};
+  color: ${props => props.theme.text.accent};
   text-align: center;
 `;
 export const FlexWrap = styled.View`
@@ -42,7 +42,7 @@ export const TextBox = styled.View`
     height: 0,
     width: 0
   }
-  shadowColor: ${props => props.theme.text};
+  shadowColor: ${props => props.theme.text.accent};
   shadowOpacity: 0.50;
   shadowRadius: 10;
   elevation: 5;
@@ -64,7 +64,7 @@ shadowOffset: {
   width: 0
 }
 border-radius: 20;
-shadowColor: ${props => props.theme.text};
+shadowColor: ${props => props.theme.text.accent};
 shadowOpacity: 0.50;
 shadowRadius: 10;
 elevation: 5;
@@ -76,3 +76,9 @@ max-height: 110;
 margin-right: 5;
 margin-left: 5;
 `;
+
+export const LatestUpdate = styled.Text`
+  color: ${props => props.theme.text.secondary};
+  text-align: center;
+  margin-bottom: 10;
+`
