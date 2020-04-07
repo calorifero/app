@@ -50,7 +50,6 @@ export const Home = () => {
             animation={animation.temperature ? 'zoomOut' : 'fadeIn'}
             onAnimationEnd={() => {
               if (animation.temperature === true) {
-                dispatch(BAD())
                 dispatch(ANIMATE_TEMPERATURE(false));
                 dispatch(SHOW_TEMPERATURE());
               }
@@ -88,7 +87,7 @@ export const Home = () => {
         {top.bank ? (
           <AnimatedMini
             duration="500"
-            color="rgba(218,165,32, 0.5)"
+            color="rgba(255,236,39, 0.7)"
             useNativeDriver
             activeOpacity={0.6}
             onPressIn={() => {

@@ -31,7 +31,7 @@ export const TopContainer = () => {
       ) : null}
       {!top.bank ? (
         <AnimatedContainer
-          color="rgba(218,165,32, 0.5)"
+          color="rgba(255,236,39, 0.7)"
           animation="zoomIn"
           duration="200"
           useNativeDriver>
