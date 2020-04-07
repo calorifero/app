@@ -25,4 +25,4 @@ export const GOOD = () => ({
 });
 export const BAD = () => ({
   type: 'BAD'
-})
+});

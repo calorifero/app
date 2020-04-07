@@ -1,11 +1,12 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { Container, TopText } from './style';
+import { Container, TopText, Heading } from './style';
 
 export const Temperature = () => {
   return (
     <Container>
-      <Text h1>Temperature: 30°°°</Text>
+      <TopText>Temperature</TopText>
+      <Heading>39°</Heading>
     </Container>
   );
 };

@@ -4,7 +4,7 @@ export const TEMPERATURE_STATUS = (
       first: '#13dfff',
       second: '#84f37b'
     },
-        color: "rgba(132,243,123, 0.5)"
+    color: 'rgba(132,243,123, 0.5)'
   },
   action
 ) => {
@@ -14,18 +14,19 @@ export const TEMPERATURE_STATUS = (
         ...state,
         gradientColors: {
           first: '#13dfff',
+
           second: '#84f37b'
         },
-        color: "rgba(132,243,123, 0.5)"
+        color: 'rgba(132,243,123, 0.5)'
       };
     case 'BAD':
       return {
         ...state,
         gradientColors: {
-          first: '#ff0000',
-          second: '#f10bc0'
+          first: '#ff2b56',
+          second: '#f3cf7b'
         },
-        color: "rgba(220,20,60, 0.5)"
+        color: 'rgba(155, 10, 39, 0.65)'
       };
     default:
       return state;

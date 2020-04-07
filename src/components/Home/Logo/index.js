@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux';
 import Svg, { G, Rect, Circle, Defs, LinearGradient, Stop } from 'react-native-svg';
 import {
   widthPercentageToDP as wp,
@@ -10,7 +10,7 @@ import { View, StyleSheet } from 'react-native';
 
 export const Logo = props => {
   const status = useSelector(state => state.temperatureStatus);
-  console.log(status)
+  console.log(status);
   return (
     <Svg height="100%" width="100%" viewBox="0 0 205 166" {...props}>
       <Defs>

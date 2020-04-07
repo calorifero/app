@@ -18,11 +18,11 @@ export const Container = styled.ScrollView`
 
 export const Header = styled.Text`
   text-align: center;
-  font-size: ${hp('8%')}
+  font-size: 2;
   color: ${props => props.theme.text.accent};
 `;
 export const Description = styled.Text`
-  font-size: ${hp('2.5%')};
+  font-size: 1;
 
   color: ${props => props.theme.text.accent};
   text-align: center;
@@ -64,7 +64,7 @@ shadowOffset: {
   width: 0
 }
 border-radius: 20;
-shadowColor: ${props => props.theme.text.accent};
+shadowColor: ${props => props.theme.shadow};
 shadowOpacity: 0.50;
 shadowRadius: 10;
 elevation: 5;
@@ -81,4 +81,4 @@ export const LatestUpdate = styled.Text`
   color: ${props => props.theme.text.secondary};
   text-align: center;
   margin-bottom: 10;
-`
+`;

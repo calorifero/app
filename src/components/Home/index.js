@@ -6,7 +6,6 @@ import * as Haptics from 'expo-haptics';
 import {
   Container,
   Header,
-  Description,
   DesignContainer,
   FlexWrap,
   TextBox,
@@ -30,11 +29,9 @@ import {
   GOOD,
   BAD
 } from './action';
-import { Text } from './Text/index'
+import { Text } from './Text/index';
 
 const AnimatedMini = Animatable.createAnimatableComponent(Mini);
-
-
 
 export const Home = () => {
   const top = useSelector(state => state.top);
@@ -48,11 +45,12 @@ export const Home = () => {
       <TopContainer />
       <FlexWrap>
         {top.temperature ? (
-          <AnimatedMini 
-          color={color.color}
-            animation={animation.temperature ? "zoomOut" : 'fadeIn'}
+          <AnimatedMini
+            color={color.color}
+            animation={animation.temperature ? 'zoomOut' : 'fadeIn'}
             onAnimationEnd={() => {
               if (animation.temperature === true) {
+                dispatch(BAD())
                 dispatch(ANIMATE_TEMPERATURE(false));
                 dispatch(SHOW_TEMPERATURE());
               }
@@ -69,8 +67,8 @@ export const Home = () => {
         ) : null}
         {top.logo ? (
           <AnimatedMini
-          color={color.color}
-            animation={animation.logo ? "zoomOut" : 'fadeIn'}
+            color={color.color}
+            animation={animation.logo ? 'zoomOut' : 'fadeIn'}
             onPressIn={() => {
               dispatch(ANIMATE_LOGO(true));
               Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
@@ -90,15 +88,14 @@ export const Home = () => {
         {top.bank ? (
           <AnimatedMini
             duration="500"
-color="rgba(218,165,32, 0.5)"
-          
+            color="rgba(218,165,32, 0.5)"
             useNativeDriver
             activeOpacity={0.6}
             onPressIn={() => {
               dispatch(ANIMATE_BANK(true));
               Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
             }}
-            animation={animation.bank ? "zoomOut" : 'fadeIn'}
+            animation={animation.bank ? 'zoomOut' : 'fadeIn'}
             onAnimationEnd={() => {
               if (animation.bank === true) {
                 dispatch(ANIMATE_BANK(false));

@@ -12,7 +12,7 @@ export const Container = styled.View`
   width: 0
 }
   border-radius: 50;
-  shadowColor: ${props => props.theme.text.accent};
+  shadowColor: ${props => props.theme.shadow};
   shadowOpacity: 0.50;
   shadowRadius: 10;
   elevation: 5;
@@ -24,11 +24,11 @@ export const Container = styled.View`
 
 export const Header = styled.Text`
   text-align: center;
-  font-size: ${hp('8%')}
+  font-size: 50;
   color: ${props => props.theme.text.accent};
 `;
 export const Description = styled.Text`
-  font-size: ${hp('2.5%')};
+  font-size: 17;
 
   color: ${props => props.theme.text.secondary};
   text-align: center;

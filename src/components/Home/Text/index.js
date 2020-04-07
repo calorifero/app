@@ -1,6 +1,6 @@
-import React from "react";
-import { View } from "react-native";
-import { Container, Header, Body } from "./style";
+import React from 'react';
+import { View } from 'react-native';
+import { Container, Header, Body } from './style';
 
 export const Text = () => {
   return (

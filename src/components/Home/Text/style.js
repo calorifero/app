@@ -2,13 +2,13 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
   display: flex;
-  background-color: ${props => props.theme.background};
+  background-color: ${props => props.theme.highlight};
   shadowOffset: {
   height: 0,
   width: 0
 }
-  border-radius: 50;
-  shadowColor: ${props => props.theme.text.accent};
+  border-radius: 20;
+  shadowColor: ${props => props.theme.shadow};
 shadowOpacity: 0.2;
 shadowRadius: 10;
 elevation: 5;
@@ -22,8 +22,8 @@ paddingBottom: 20;
 export const Header = styled.Text`
   font-size: 30;
   color: ${props => props.theme.text.accent};
-`
+`;
 export const Body = styled.Text`
   font-size: 15;
   color: ${props => props.theme.text.accent};
-`
+`;

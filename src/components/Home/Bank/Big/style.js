@@ -11,5 +11,5 @@ export const TopText = styled.Text`
 `;
 export const Money = styled.Text`
   font-size: 100;
-  color: ${props => props.theme.text.accent}
+  color: ${props => props.theme.text.accent};
 `;
