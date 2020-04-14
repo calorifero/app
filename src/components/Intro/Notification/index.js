@@ -6,18 +6,21 @@ import {
   Money,
   Yes,
   YesButton,
-  DoYouAgree,
   No,
   Header,
-  ButtonsContainer
+  ButtonsContainer,
+  StyleSvg
 } from './style';
 import { getPermission } from './getPermission';
+import { Svgs } from './svg';
 
 export const Notification = () => {
   return (
     <Container>
       <Header>Vorremmo avvisarti quando stai consumando troppo</Header>
-      <DoYouAgree>Cosa ne pensi?</DoYouAgree>
+      <StyleSvg>
+        <Svgs />
+      </StyleSvg>
       <ButtonsContainer>
         <YesButton onPress={() => getPermission()}>
           <Yes>D'accordo♻️</Yes>
