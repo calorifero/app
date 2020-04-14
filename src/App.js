@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { AppearanceProvider, useColorScheme } from 'react-native-appearance';
 import { StyleSheet, Text, StatusBar, View, SafeAreaView } from 'react-native';
 import { ThemeProvider } from 'styled-components';
@@ -8,6 +8,7 @@ import { store } from './redux/store';
 import { Home } from './components/Home/index';
 import { lightTheme } from './common/theme/lightTheme';
 import { darkTheme } from './common/theme/darkTheme';
+import { Notification } from './components/Intro/Notification/index';
 
 const App = () => {
   const theme = useColorScheme() === 'light' ? lightTheme : darkTheme;
@@ -19,7 +20,7 @@ const App = () => {
             <StatusBar
               barStyle={`${useColorScheme() === 'light' ? 'dark-content' : 'light-content'}`}
             />
-            <Home />
+            <Notification />
           </SafeAreaView>
         </ThemeProvider>
       </AppearanceProvider>

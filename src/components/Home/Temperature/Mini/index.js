@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { Header, Body } from './style'
+import { Header, Body } from './style';
 
 export const Temperature = () => {
   return (
