@@ -1,4 +1,5 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { Text, TouchableOpacity } from 'react-native';
 import {
   Container,
@@ -15,6 +16,7 @@ import { getPermission } from './getPermission';
 import { Svgs } from './svg';
 
 export const Notification = ({ navigation }) => {
+  const dispatch = useDispatch();
   return (
     <Container>
       <Header>Vorremmo avvisarti quando stai consumando troppo</Header>
@@ -25,7 +27,7 @@ export const Notification = ({ navigation }) => {
         <YesButton
           onPress={() => {
             getPermission();
-            navigation.navigate('Home');
+            dispatch({ type: 'HOME' });
           }}>
           <Yes>D'accordo♻️</Yes>
         </YesButton>
