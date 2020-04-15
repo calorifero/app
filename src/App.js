@@ -6,15 +6,15 @@ import { registerRootComponent } from 'expo';
 import { Provider } from 'react-redux';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { store } from './redux/store';
+import configureStore from './redux/store';
 import { Home } from './components/Home/index';
 import { lightTheme } from './common/theme/lightTheme';
 import { darkTheme } from './common/theme/darkTheme';
-import { Notification } from './components/Intro/Notification/index';
-import { Welcome } from './components/Intro/Welcome/index';
+import { Switch } from './components/Switch';
 import 'react-native-gesture-handler';
 
 const Stack = createStackNavigator();
+const { store, persistor } = configureStore();
 
 const App = () => {
   const theme = useColorScheme() === 'light' ? lightTheme : darkTheme;
@@ -26,14 +26,7 @@ const App = () => {
             <StatusBar
               barStyle={`${useColorScheme() === 'light' ? 'dark-content' : 'light-content'}`}
             />
-
-            <NavigationContainer>
-              <Stack.Navigator options={{ headerShown: false }} headerMode="none">
-                <Stack.Screen name="Welcome" component={Welcome} />
-                <Stack.Screen name="Notification" component={Notification} />
-                <Stack.Screen name="Home" component={Home} />
-              </Stack.Navigator>
-            </NavigationContainer>
+            <Switch />
           </SafeAreaView>
         </ThemeProvider>
       </AppearanceProvider>
