@@ -1,11 +1,8 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.ScrollView`
+export const Container = styled.View`
   flex: 1;
   background-color: ${props => props.theme.background};
-
-  margin-left: 5;
-  margin-right: 5;
   padding-left: 20;
   padding-right: 20;
   padding-top: 20;
@@ -21,10 +18,8 @@ export const YesButton = styled.TouchableOpacity`
   padding-bottom: 10;
 `;
 export const StyleSvg = styled.View`
-  top: -20;
-  margin-left: -30;
-  margin-right: -30;
-  height: 170%;
+  height: 55%;
+  width: 100%;
 `;
 
 export const Yes = styled.Text`

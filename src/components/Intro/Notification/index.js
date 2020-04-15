@@ -14,7 +14,7 @@ import {
 import { getPermission } from './getPermission';
 import { Svgs } from './svg';
 
-export const Notification = () => {
+export const Notification = ({ navigation }) => {
   return (
     <Container>
       <Header>Vorremmo avvisarti quando stai consumando troppo</Header>
@@ -22,11 +22,15 @@ export const Notification = () => {
         <Svgs />
       </StyleSvg>
       <ButtonsContainer>
-        <YesButton onPress={() => getPermission()}>
+        <YesButton
+          onPress={() => {
+            getPermission();
+            navigation.navigate('Home');
+          }}>
           <Yes>D'accordo♻️</Yes>
         </YesButton>
         <TouchableOpacity>
-          <No>Sto bene così</No>
+          <No onPress={() => navigation.navigate('Home')}>Sto bene così</No>
         </TouchableOpacity>
       </ButtonsContainer>
     </Container>
