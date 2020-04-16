@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { PersistGate } from 'redux-persist/es/integration/react';
 import { Home } from './Home/index';
 import { Notification } from './Intro/Notification/index';
 import { Welcome } from './Intro/Welcome/index';

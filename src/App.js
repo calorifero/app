@@ -6,6 +6,7 @@ import { registerRootComponent } from 'expo';
 import { Provider } from 'react-redux';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { PersistGate } from 'redux-persist/es/integration/react';
 import configureStore from './redux/store';
 import { Home } from './components/Home/index';
 import { lightTheme } from './common/theme/lightTheme';
@@ -26,7 +27,11 @@ const App = () => {
             <StatusBar
               barStyle={`${useColorScheme() === 'light' ? 'dark-content' : 'light-content'}`}
             />
-            <Switch />
+            <Provider store={store}>
+              <PersistGate loading={null} persistor={persistor}>
+                <Switch />
+              </PersistGate>
+            </Provider>
           </SafeAreaView>
         </ThemeProvider>
       </AppearanceProvider>
