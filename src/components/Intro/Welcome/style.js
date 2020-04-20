@@ -3,6 +3,7 @@ import styled from 'styled-components/native';
 export const Container = styled.KeyboardAvoidingView`
   background-color: ${props => props.theme.background};
   flex: 1;
+  padding-top: 20;
   justify-content: space-around;
 `;
 
@@ -29,18 +30,28 @@ export const TextButton = styled.Text`
   color: ${props => props.theme.text.accent};
 `;
 
-export const Input = styled.TextInput`
+export const Input = styled.Text`
   font-size: 25;
-  background: rgba(56, 165, 66, 0.63);
   border-radius: 11;
-  paddingtop: 30;
-  paddingleft: 15;
-  paddingright: 15;
-  paddingbottom: 30;
-  border: none;
+
+  width: 40;
+  height: 40;
+
+  line-height: 38;
+  color: ${props => props.theme.text.accent};
+  border-width: 1.5;
+  border-radius: 10;
+  border-color: ${props => props.theme.text.secondary};
+  text-align: center;
+
+  &:active {
+    border-color: #000;
+  }
 `;
 
 export const Content = styled.View`
+  flex-grow: 1;
   padding-left: 20;
   padding-right: 20;
+  margin-bottom: 70;
 `;
