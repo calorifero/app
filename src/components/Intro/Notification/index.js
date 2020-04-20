@@ -32,7 +32,7 @@ export const Notification = ({ navigation }) => {
           <Yes>D'accordo♻️</Yes>
         </YesButton>
         <TouchableOpacity>
-          <No onPress={() => navigation.navigate('Home')}>Sto bene così</No>
+          <No onPress={() => dispatch({ type: 'HOME' })}>Sto bene così</No>
         </TouchableOpacity>
       </ButtonsContainer>
     </Container>
