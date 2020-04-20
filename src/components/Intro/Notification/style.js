@@ -2,6 +2,7 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
   flex: 1;
+  justify-content: space-around;
   background-color: ${props => props.theme.background};
   padding-left: 20;
   padding-right: 20;
@@ -47,4 +48,5 @@ export const Header = styled.Text`
 
 export const ButtonsContainer = styled.View`
   align-items: center;
+  margin-bottom: 50;
 `;

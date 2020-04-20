@@ -4,6 +4,8 @@ import { AsyncStorage } from 'react-native';
 import thunk from 'redux-thunk';
 import { rootReducer } from './rootReducer';
 
+AsyncStorage.clear();
+
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage

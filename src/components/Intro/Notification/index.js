@@ -13,15 +13,15 @@ import {
   StyleSvg
 } from './style';
 import { getPermission } from './getPermission';
-import { Svgs } from './svg';
+import { SvgComponent } from './svg';
 
 export const Notification = ({ navigation }) => {
   const dispatch = useDispatch();
   return (
     <Container>
-      <Header>Vorremmo avvisarti quando stai consumando troppo</Header>
+      <Header>Vuoi rimanere aggiornato?</Header>
       <StyleSvg>
-        <Svgs />
+        <SvgComponent />
       </StyleSvg>
       <ButtonsContainer>
         <YesButton
