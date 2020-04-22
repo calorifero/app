@@ -4,7 +4,7 @@ export const TEMPERATURE_STATUS = (
       first: '#13dfff',
       second: '#84f37b'
     },
-    color: 'rgba(56,165,66, 0.2)'
+    color: 'rgba(56,165,66, 0.73)'
   },
   action
 ) => {
@@ -17,7 +17,7 @@ export const TEMPERATURE_STATUS = (
 
           second: '#84f37b'
         },
-        color: 'rgba(56,165,66, 0.2)'
+        color: 'rgba(56,165,66, 0.73)'
       };
     case 'BAD':
       return {
