@@ -11,7 +11,7 @@ export const Container = styled.View`
 
 export const YesButton = styled.TouchableOpacity`
   display: flex;
-  background: rgba(56, 165, 66, 0.63);
+  background: #8dfd84;
   border-radius: 50;
   padding-left: 40;
   padding-right: 40;

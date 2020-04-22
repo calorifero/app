@@ -11,7 +11,6 @@ const Stack = createStackNavigator();
 
 export const Switch = () => {
   const page = useSelector(state => state.page);
-  console.log(page);
   return (
     <NavigationContainer>
       <Stack.Navigator options={{ headerShown: false }} headerMode="none">

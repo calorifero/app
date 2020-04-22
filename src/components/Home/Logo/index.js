@@ -10,7 +10,6 @@ import { View, StyleSheet } from 'react-native';
 
 export const Logo = props => {
   const status = useSelector(state => state.temperatureStatus);
-  console.log(status);
   return (
     <Svg height="100%" width="100%" viewBox="0 0 205 166" {...props}>
       <Defs>

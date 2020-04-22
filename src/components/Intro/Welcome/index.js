@@ -14,7 +14,16 @@ import {
   useBlurOnFulfill,
   useClearByFocusCell
 } from 'react-native-confirmation-code-field';
-import { Container, Header, ButtonsContainer, TextButton, Input, Content } from './style';
+import {
+  Container,
+  Header,
+  ButtonsContainer,
+  TextButton,
+  Input,
+  InputWrapper,
+  Content,
+  Here
+} from './style';
 import { SvgComponent } from './svg';
 
 export const Welcome = ({ navigation }) => {
@@ -26,7 +35,7 @@ export const Welcome = ({ navigation }) => {
     setValue
   });
   useEffect(() => {
-    if (value.length === 3) navigation.navigate('Notification');
+    if (value.length === CELL_COUNT) navigation.navigate('Notification');
   });
   return (
     <Container
@@ -35,18 +44,21 @@ export const Welcome = ({ navigation }) => {
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <Content>
           <Header>Potresti ricordarci il codice che abbiamo scritto sul termometro?</Header>
-          <SvgComponent style={{ marginTop: 30 }} />
+          <SvgComponent style={{ marginTop: 20, marginBottom: 20 }} />
+          <Here>✍️Scrivi qui✍️</Here>
           <CodeField
             ref={ref}
             {...props}
             value={value}
             onChangeText={setValue}
             cellCount={CELL_COUNT}
-            rootStyle={{ marginTop: 20 }}
+            rootStyle={{ marginTop: 5 }}
             renderCell={({ index, symbol, isFocused }) => (
-              <Input key={index} onLayout={getCellOnLayoutHandler(index)}>
-                {symbol || (isFocused ? <Cursor /> : null)}
-              </Input>
+              <InputWrapper>
+                <Input key={index} onLayout={getCellOnLayoutHandler(index)}>
+                  {symbol || (isFocused ? <Cursor /> : null)}
+                </Input>
+              </InputWrapper>
             )}
           />
         </Content>

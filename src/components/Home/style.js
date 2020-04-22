@@ -51,27 +51,20 @@ export const MiniLogo = styled.View``;
 export const SmallSvg = styled.View``;
 
 export const Mini = styled.TouchableOpacity`
-position: relative;
-display: flex;
-align-items: center;
-justify-content: center;
-background-color: ${props => props.color};
-shadowOffset: {
-  height: 0,
-  width: 0
-}
-border-radius: 20;
-shadowColor: ${props => props.theme.shadow};
-shadowOpacity: 0.40;
-shadowRadius: 5;
-elevation: 5;
-flex: 1;
-padding-top: 10;
-padding-bottom: 10;
-min-height: 110;
-max-height: 110;
-margin-right: 5;
-margin-left: 5;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${props => props.color};
+
+  border-radius: 20;
+  flex: 1;
+  padding-top: 10;
+  padding-bottom: 10;
+  min-height: 110;
+  max-height: 110;
+  margin-right: 5;
+  margin-left: 5;
 `;
 
 export const LatestUpdate = styled.Text`

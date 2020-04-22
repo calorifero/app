@@ -29,29 +29,31 @@ export const TextButton = styled.Text`
   text-align: center;
   color: ${props => props.theme.text.accent};
 `;
+export const InputWrapper = styled.View`
+  background-color: #8dfd84;
+  border-radius: 10;
+`;
 
 export const Input = styled.Text`
   font-size: 25;
-  border-radius: 11;
 
-  width: 40;
-  height: 40;
-
-  line-height: 38;
-  color: ${props => props.theme.text.accent};
-  border-width: 1.5;
-  border-radius: 10;
-  border-color: ${props => props.theme.text.secondary};
   text-align: center;
+  width: 60;
+  height: 60;
 
-  &:active {
-    border-color: #000;
-  }
+  line-height: 60;
+  color: ${props => props.theme.text.accent};
 `;
 
 export const Content = styled.View`
   flex-grow: 1;
   padding-left: 20;
   padding-right: 20;
-  margin-bottom: 70;
+  margin-bottom: 100;
+`;
+
+export const Here = styled.Text`
+  font-size: 20;
+  margin-top: 10;
+  color: ${props => props.theme.text.secondary};
 `;
