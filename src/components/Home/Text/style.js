@@ -7,10 +7,10 @@ export const Container = styled.View`
   border-radius: 20;
 
   margin-top: 20;
-  paddingleft: 20;
-  paddingtop: 10;
-  paddingright: 10;
-  paddingbottom: 20;
+  padding-left: 20;
+  padding-top: 10;
+  padding-right: 10;
+  padding-bottom: 20;
 
   border: ${props => props.color};
   border-width: 3;
