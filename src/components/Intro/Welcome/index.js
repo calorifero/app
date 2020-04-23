@@ -54,7 +54,7 @@ export const Welcome = ({ navigation }) => {
             cellCount={CELL_COUNT}
             rootStyle={{ marginTop: 5 }}
             renderCell={({ index, symbol, isFocused }) => (
-              <InputWrapper>
+              <InputWrapper key={index}>
                 <Input key={index} onLayout={getCellOnLayoutHandler(index)}>
                   {symbol || (isFocused ? <Cursor /> : null)}
                 </Input>
