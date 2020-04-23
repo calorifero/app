@@ -4,22 +4,22 @@ export const Container = styled.View`
   display: flex;
   background-color: ${props => props.theme.highlight};
 
-  border-radius: 20;
+  border-radius: 20px;
 
-  margin-top: 20;
-  padding-left: 20;
-  padding-top: 10;
-  padding-right: 10;
-  padding-bottom: 20;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
 
   border: ${props => props.color};
-  border-width: 3;
+  border-width: 3px;
 `;
 export const Header = styled.Text`
-  font-size: 30;
+  font-size: 30px;
   color: ${props => props.theme.text.accent};
 `;
 export const Body = styled.Text`
-  font-size: 15;
+  font-size: 15px;
   color: ${props => props.theme.text.accent};
 `;

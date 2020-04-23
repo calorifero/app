@@ -3,13 +3,13 @@ import styled from 'styled-components/native';
 export const Container = styled.View`
   text-align: left;
 
-  min-height: 200;
+  min-height: 200px;
 `;
 export const TopText = styled.Text`
-  font-size: 30;
+  font-size: 30px;
   color: ${props => props.theme.text.accent};
 `;
 export const Money = styled.Text`
-  font-size: 100;
+  font-size: 100px;
   color: ${props => props.theme.text.accent};
 `;

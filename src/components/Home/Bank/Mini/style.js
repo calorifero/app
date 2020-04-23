@@ -5,6 +5,6 @@ export const Container = styled.View`
 `;
 
 export const Money = styled.Text`
-  font-size: 30;
+  font-size: 30px;
   color: ${props => props.theme.text.accent};
 `;

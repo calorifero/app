@@ -16,12 +16,12 @@ export const TopContainer = () => {
   return (
     <View>
       {!top.temperature ? (
-        <AnimatedContainer color={color.color} animation="zoomIn" duration="200" useNativeDriver>
+        <AnimatedContainer color={color.color} animation="zoomIn" duration={475} useNativeDriver>
           <Temperature />
         </AnimatedContainer>
       ) : null}
       {!top.logo ? (
-        <AnimatedContainer color={color.color} animation="zoomIn" duration="200" useNativeDriver>
+        <AnimatedContainer color={color.color} animation="zoomIn" duration={475} useNativeDriver>
           <BigSvg>
             <Logo />
           </BigSvg>
@@ -33,7 +33,7 @@ export const TopContainer = () => {
         <AnimatedContainer
           color="rgba(255,236,39, 0.7)"
           animation="zoomIn"
-          duration="200"
+          duration={475}
           useNativeDriver>
           <Bank />
         </AnimatedContainer>

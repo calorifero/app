@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Animated, TouchableOpacity } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import * as Animatable from 'react-native-animatable';
@@ -37,6 +37,11 @@ export const Home = () => {
   const top = useSelector(state => state.top);
   const animation = useSelector(state => state.animation);
   const color = useSelector(state => state.temperatureStatus);
+  
+  const [bankAnimation, setBankAnimation ] = useState(false)
+  const [temperatureAnimation, setTemperatureAnimation ] = useState(false)
+  const [logoAnimation, setLogoAnimation ] = useState(false)
+
   const dispatch = useDispatch();
 
   return (
@@ -47,18 +52,18 @@ export const Home = () => {
         {top.temperature ? (
           <AnimatedMini
             color={color.color}
-            animation={animation.temperature ? 'zoomOut' : 'fadeIn'}
+            animation={temperatureAnimation ? 'zoomOut' : "zoomIn"}
             onAnimationEnd={() => {
-              if (animation.temperature === true) {
-                dispatch(ANIMATE_TEMPERATURE(false));
+              if (temperatureAnimation === true) {
+                setTemperatureAnimation(false)
                 dispatch(SHOW_TEMPERATURE());
               }
             }}
-            duration="500"
+            duration={temperatureAnimation ? 450 : 300}
             useNativeDriver
             activeOpacity={0.6}
             onPressIn={() => {
-              dispatch(ANIMATE_TEMPERATURE(true));
+              setTemperatureAnimation(true)
               Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
             }}>
             <Temperature />
@@ -67,18 +72,19 @@ export const Home = () => {
         {top.logo ? (
           <AnimatedMini
             color={color.color}
-            animation={animation.logo ? 'zoomOut' : 'fadeIn'}
+            animation={logoAnimation ? 'zoomOut' : "zoomIn"}
             onPressIn={() => {
-              dispatch(ANIMATE_LOGO(true));
+
+                setLogoAnimation(true)
               Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
             }}
             onAnimationEnd={() => {
-              if (animation.logo === true) {
-                dispatch(ANIMATE_LOGO(false));
+              if (logoAnimation === true) {
+                setLogoAnimation(false)
                 dispatch(SHOW_LOGO());
               }
             }}
-            duration="500"
+            duration={temperatureAnimation ? 450 : 300}
             useNativeDriver
             activeOpacity={0.6}>
             <Logo />
@@ -86,18 +92,18 @@ export const Home = () => {
         ) : null}
         {top.bank ? (
           <AnimatedMini
-            duration="500"
+            duration={temperatureAnimation ? 450 : 300}
             color="rgba(255,236,39, 0.7)"
             useNativeDriver
             activeOpacity={0.6}
             onPressIn={() => {
-              dispatch(ANIMATE_BANK(true));
+              setBankAnimation(true)
               Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
             }}
-            animation={animation.bank ? 'zoomOut' : 'fadeIn'}
+            animation={bankAnimation ? 'zoomOut' : "zoomIn"}
             onAnimationEnd={() => {
-              if (animation.bank === true) {
-                dispatch(ANIMATE_BANK(false));
+              if (bankAnimation === true) {
+                setBankAnimation(false)
                 dispatch(SHOW_BANK());
               }
             }}>
