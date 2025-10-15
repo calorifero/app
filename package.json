@@ -11,7 +11,7 @@
     "prettier": "eslint . --fix"
   },
   "dependencies": {
-    "expo": "~36.0.0",
+    "expo": "~48.0.0",
     "expo-cli": "^3.11.7",
     "expo-haptics": "^8.1.0",
     "react": "~16.9.0",
